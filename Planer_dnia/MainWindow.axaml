@@ -5,5 +5,38 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Planer_dnia.MainWindow"
         Title="Planer_dnia">
-    Welcome to Avalonia!
+        <Grid HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+                
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="Auto" />
+
+                <ColumnDefinition Width="Auto" />
+
+                <ColumnDefinition Width="Auto" />
+
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Row="0" Grid.Column="0" Watermark="wpisz nazwe zadania" Margin="10"></TextBox>
+            
+            <ComboBox Grid.Row="0" Grid.Column="1" Width="200" Margin="10" SelectedIndex="0">
+                <ComboBoxItem Content="Wybierz kategorie zadania"/>
+                <ComboBoxItem Content="Praca"/>
+                <ComboBoxItem Content="Relaks"/>
+                <ComboBoxItem Content="Zakupy"/>
+            </ComboBox>
+            
+            <Button Grid.Row="0" Grid.Column="2" Width="200" Content="Dodaj zadanie" 
+                    Background="Black" Foreground="White" BorderBrush="White"></Button>
+       
+        </Grid>
 </Window>

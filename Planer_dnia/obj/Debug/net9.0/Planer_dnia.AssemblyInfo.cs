@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Planer_dnia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a375ae0734b531dd881f56c750d8970373e8c71")]
 [assembly: System.Reflection.AssemblyProductAttribute("Planer_dnia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Planer_dnia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
