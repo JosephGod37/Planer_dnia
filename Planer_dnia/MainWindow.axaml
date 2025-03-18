@@ -26,17 +26,45 @@
 
             </Grid.ColumnDefinitions>
 
-            <TextBox Grid.Row="0" Grid.Column="0" Watermark="wpisz nazwe zadania" Margin="10"></TextBox>
+            <TextBox x:Name="TaskTextBox" Grid.Row="0" Grid.Column="0" Watermark="wpisz nazwe zadania" Margin="10"></TextBox>
             
-            <ComboBox Grid.Row="0" Grid.Column="1" Width="200" Margin="10" SelectedIndex="0">
+            <ComboBox x:Name="CategoryComboBox" Grid.Row="0" Grid.Column="1" Width="200" Margin="10" SelectedIndex="0">
                 <ComboBoxItem Content="Wybierz kategorie zadania"/>
                 <ComboBoxItem Content="Praca"/>
                 <ComboBoxItem Content="Relaks"/>
                 <ComboBoxItem Content="Zakupy"/>
             </ComboBox>
             
-            <Button Grid.Row="0" Grid.Column="2" Width="200" Content="Dodaj zadanie" 
+            <Button x:Name="addTask" Grid.Row="0" Grid.Column="2" Width="200" Content="Dodaj zadanie" Click="AddTaskButtonClick"
                     Background="Black" Foreground="White" BorderBrush="White"></Button>
        
+            
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Lista zadań" FontWeight="Bold" Margin="10" HorizontalAlignment="Center"/>
+            <ItemsControl x:Name="TasksList" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="10">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Nazwa}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <ComboBox SelectedItem="{Binding Kategoria}" Grid.Column="1" VerticalAlignment="Center">
+                                <ComboBoxItem Content="Praca"/>
+                                <ComboBoxItem Content="Relaks"/>
+                                <ComboBoxItem Content="Zakupy"/>
+                            </ComboBox>
+                            <CheckBox IsChecked="{Binding CzyUkonczone}" Content="Ukończone" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <Button Content="Usuń" Grid.Column="3" Click="OnDeleteTaskButtonClick" VerticalAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+           
+            <TextBlock x:Name="SummaryTextBlock" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="Liczba zadań: 0, Ukończonych: 0" Margin="10" HorizontalAlignment="Center"/>
         </Grid>
+    
 </Window>
