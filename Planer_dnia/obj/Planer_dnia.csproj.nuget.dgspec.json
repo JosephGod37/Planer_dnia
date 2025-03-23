@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/home/joseph/Pulpit/C#/Planer_dnia/Planer_dnia/Planer_dnia.csproj": {}
+    "C:\\Users\\User\\RiderProjects\\Planer_dnia\\Planer_dnia\\Planer_dnia.csproj": {}
   },
   "projects": {
-    "/home/joseph/Pulpit/C#/Planer_dnia/Planer_dnia/Planer_dnia.csproj": {
+    "C:\\Users\\User\\RiderProjects\\Planer_dnia\\Planer_dnia\\Planer_dnia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/joseph/Pulpit/C#/Planer_dnia/Planer_dnia/Planer_dnia.csproj",
+        "projectUniqueName": "C:\\Users\\User\\RiderProjects\\Planer_dnia\\Planer_dnia\\Planer_dnia.csproj",
         "projectName": "Planer_dnia",
-        "projectPath": "/home/joseph/Pulpit/C#/Planer_dnia/Planer_dnia/Planer_dnia.csproj",
-        "packagesPath": "/home/joseph/.nuget/packages/",
-        "outputPath": "/home/joseph/Pulpit/C#/Planer_dnia/Planer_dnia/obj/",
+        "projectPath": "C:\\Users\\User\\RiderProjects\\Planer_dnia\\Planer_dnia\\Planer_dnia.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\RiderProjects\\Planer_dnia\\Planer_dnia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/joseph/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -86,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

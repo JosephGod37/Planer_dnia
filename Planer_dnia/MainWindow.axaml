@@ -1,70 +1,37 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Planer_dnia.MainWindow"
         Title="Planer_dnia">
-        <Grid HorizontalAlignment="Center">
-            <Grid.RowDefinitions>
+    <Grid HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-                <RowDefinition Height="Auto" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
 
-                <RowDefinition Height="Auto" />
-
-                <RowDefinition Height="Auto" />
-                
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-
-                <ColumnDefinition Width="Auto" />
-
-                <ColumnDefinition Width="Auto" />
-
-                <ColumnDefinition Width="Auto" />
-
-            </Grid.ColumnDefinitions>
-
-            <TextBox x:Name="TaskTextBox" Grid.Row="0" Grid.Column="0" Watermark="wpisz nazwe zadania" Margin="10"></TextBox>
-            
-            <ComboBox x:Name="CategoryComboBox" Grid.Row="0" Grid.Column="1" Width="200" Margin="10" SelectedIndex="0">
-                <ComboBoxItem Content="Wybierz kategorie zadania"/>
-                <ComboBoxItem Content="Praca"/>
-                <ComboBoxItem Content="Relaks"/>
-                <ComboBoxItem Content="Zakupy"/>
-            </ComboBox>
-            
-            <Button x:Name="addTask" Grid.Row="0" Grid.Column="2" Width="200" Content="Dodaj zadanie" Click="AddTaskButtonClick"
-                    Background="Black" Foreground="White" BorderBrush="White"></Button>
        
-            
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Lista zadań" FontWeight="Bold" Margin="10" HorizontalAlignment="Center"/>
-            <ItemsControl x:Name="TasksList" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="10">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Nazwa}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <ComboBox SelectedItem="{Binding Kategoria}" Grid.Column="1" VerticalAlignment="Center">
-                                <ComboBoxItem Content="Praca"/>
-                                <ComboBoxItem Content="Relaks"/>
-                                <ComboBoxItem Content="Zakupy"/>
-                            </ComboBox>
-                            <CheckBox IsChecked="{Binding CzyUkonczone}" Content="Ukończone" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            <Button Content="Usuń" Grid.Column="3" Click="OnDeleteTaskButtonClick" VerticalAlignment="Center"/>
-                        </Grid>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+        <TextBox x:Name="TaskTextBox" Grid.Row="0" Grid.Column="0" Watermark="Wpisz nazwę zadania" Margin="10"/>
+        <ComboBox x:Name="CategoryComboBox" Grid.Row="0" Grid.Column="1" Width="200" Margin="10" SelectedIndex="0">
+            <ComboBoxItem Content="Wybierz kategorię zadania"/>
+            <ComboBoxItem Content="Praca"/>
+            <ComboBoxItem Content="Relaks"/>
+            <ComboBoxItem Content="Zakupy"/>
+        </ComboBox>
+        <Button x:Name="addTask" Grid.Row="0" Grid.Column="2" Width="200" Content="Dodaj zadanie" Click="AddTaskButtonClick"
+                Background="Black" Foreground="White" BorderBrush="White"></Button>
 
-           
-            <TextBlock x:Name="SummaryTextBlock" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="Liczba zadań: 0, Ukończonych: 0" Margin="10" HorizontalAlignment="Center"/>
-        </Grid>
-    
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Lista zadań" FontWeight="Bold" Margin="10" HorizontalAlignment="Center"/>
+
+       
+        <ListBox x:Name="TasksList" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" Padding="10"/>
+
+        <TextBlock x:Name="SummaryTextBlock" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="Liczba zadań: 0, Ukończonych: 0" Margin="10" HorizontalAlignment="Center"/>
+    </Grid>
 </Window>
